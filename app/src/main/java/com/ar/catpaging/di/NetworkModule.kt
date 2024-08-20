@@ -3,7 +3,10 @@ package com.ar.catpaging.di
 import com.ar.catpaging.AppConstant.API_KEY
 import com.ar.catpaging.AppConstant.AUTH_HEADER
 import com.ar.catpaging.AppConstant.BASE_URL
+import com.ar.catpaging.data.CatRepositoryImpl
 import com.ar.catpaging.data.network.CatApi
+import com.ar.catpaging.domain.repository.CatRepository
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

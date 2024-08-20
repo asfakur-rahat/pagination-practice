@@ -100,6 +100,4 @@ class CatRemoteMediator(
             ?.data?.firstOrNull()
             ?.let { cat -> db.getKeysDao().remoteKeysCatId(cat.id) }
     }
-
-
 }
