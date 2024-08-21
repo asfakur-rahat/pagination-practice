@@ -23,7 +23,7 @@ class CatRepositoryImpl@Inject constructor(
         return Pager(
             config = PagingConfig(
                 pageSize = PAGE_SIZE,
-                maxSize = PAGE_SIZE + (PAGE_SIZE * 2),
+                maxSize = (PAGE_SIZE * 1.5).toInt(),
                 enablePlaceholders = false
             ),
             pagingSourceFactory = { CatPagingSource(catApi) }
@@ -36,7 +36,7 @@ class CatRepositoryImpl@Inject constructor(
         return Pager(
             config = PagingConfig(
                 pageSize = PAGE_SIZE,
-                maxSize = PAGE_SIZE + (PAGE_SIZE * 2),
+                maxSize = (PAGE_SIZE * 1.5).toInt(),
                 enablePlaceholders = false
             ),
             pagingSourceFactory = pagingSourceFactory
@@ -50,7 +50,7 @@ class CatRepositoryImpl@Inject constructor(
         return Pager(
             config = PagingConfig(
                 pageSize = PAGE_SIZE,
-                maxSize = PAGE_SIZE + (PAGE_SIZE * 2),
+                maxSize = (PAGE_SIZE * 1.5).toInt(),
                 enablePlaceholders = false,
             ),
             remoteMediator = CatRemoteMediator(

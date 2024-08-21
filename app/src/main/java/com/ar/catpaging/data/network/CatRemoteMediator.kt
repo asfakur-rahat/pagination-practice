@@ -44,7 +44,7 @@ class CatRemoteMediator(
                 }
                 val prevKey = if (page == STARTING_PAGE_INDEX) null else page - 1
                 val nextKey = if (isEndOfList) null else page + 1
-                val keys = response.map {
+                val keys = response.map { it->
                     RemoteKey(it.id, prevKey = prevKey, nextKey = nextKey)
                 }
                 db.getKeysDao().insertAll(keys)

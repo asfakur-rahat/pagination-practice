@@ -17,7 +17,7 @@ abstract class BaseViewModel : ViewModel() {
 
     val cats: Flow<PagingData<CatListItem>> by lazy {
         dataSource
-            .map { pagingData -> pagingData.map { CatListItem.CatItem(it) } }
+            .map { pagingData -> pagingData.map {  CatListItem.CatItem(it) } }
             .map {
                 it.insertSeparators { before, after ->
                     if (after == null) {
